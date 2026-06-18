@@ -1,0 +1,8 @@
+# OS
+.DS_Store
+
+# Editor/harness local config
+.claude/
+
+# Node (없지만 혹시 모를 경우 대비)
+node_modules/

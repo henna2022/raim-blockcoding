@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>라이미의 블록코딩 연구소</title>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#6c7bff" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="블록코딩 연구소" />
+<link rel="apple-touch-icon" href="assets/icon-192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Jua&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<link rel="stylesheet" href="css/styles.css?v=3" />
+</head>
+<body>
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+
+  <div id="appScale">
+  <header>
+    <img class="logoBadge" src="assets/seoulraim_logo.png" alt="SEOUL RAIM" />
+    <div>
+      <div class="logoTitle" data-i18n="appTitle">라이미의 블록코딩 연구소</div>
+      <div class="logoSub" data-i18n="appSub">코딩이 처음이어도 괜찮아!</div>
+    </div>
+    <div class="headRight">
+      <button class="homeBtn" id="homeBtn" data-i18n="homeBtn">🏠 처음으로</button>
+      <div class="langWrap">
+        <button class="langBtn" id="langBtn"><span class="globe">🌐</span><span id="langCurrent">ENG</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- INTRO -->
+    <section class="screen on" id="s-intro">
+      <div class="introWrap fadeUp">
+        <img class="introHero" id="introHero" src="assets/raimi.png" alt="라이미" />
+        <div class="introHi" data-i18n="introHi">안녕! 나는 코딩 친구 라이미야 🤖</div>
+        <h1 class="introTitle" data-i18n="introTitle">라이미와 함께 코딩을 배워보자!</h1>
+        <div class="introBubble" data-i18n-html="introBody"></div>
+        <button class="introBtn" id="introStart" data-i18n="introStart">좋아, 시작하자! 🚀</button>
+      </div>
+    </section>
+
+    <!-- HOME : 3개 활동 카드 + 추천 순서 -->
+    <section class="screen center" id="s-home">
+      <h1 class="homeH1" data-i18n="homeH1">오늘은 뭘 해볼까?</h1>
+      <p class="homeP" data-i18n="homeP">번호 순서대로 하면 가장 좋아요. 골라봐! ✨</p>
+      <div class="cardRow">
+        <button class="bigCard cardQuiz" data-act="quiz">
+          <div class="stepBadge">1</div>
+          <div class="cardIcon">🧠</div>
+          <div class="cardTitle" data-i18n="cardQuizTitle">코딩이 뭐예요?</div>
+          <div class="cardDesc" data-i18n-html="cardQuizDesc"></div>
+          <div class="cardTag" data-i18n="cardQuizTag">퀴즈 · 3분</div>
+        </button>
+        <button class="bigCard cardGame" data-act="game">
+          <div class="stepBadge">2</div>
+          <div class="cardIcon">🎮</div>
+          <div class="cardTitle" data-i18n="cardGameTitle">게임 만들기</div>
+          <div class="cardDesc" data-i18n-html="cardGameDesc"></div>
+          <div class="cardTag" data-i18n="cardGameTag">블록코딩 · 5분</div>
+        </button>
+        <button class="bigCard cardPython" data-act="python">
+          <div class="stepBadge">3</div>
+          <img class="cardImg cardPyLogo" src="assets/python-logo.svg" alt="Python" />
+          <div class="cardTitle" data-i18n="cardPythonTitle">파이썬 배우기</div>
+          <div class="cardDesc" data-i18n-html="cardPythonDesc"></div>
+          <div class="cardTag" data-i18n="cardPythonTag">문법 · 알고리즘</div>
+        </button>
+      </div>
+    </section>
+
+    <!-- 게임 모드 선택 : 초보자 / 도전자 -->
+    <section class="screen center" id="s-mode">
+      <h1 class="homeH1" data-i18n="modeH1">어떻게 도전할까?</h1>
+      <p class="homeP" data-i18n="modeP">라이미가 도와줄까, 혼자 해볼까? 🤔</p>
+      <div class="cardRow">
+        <button class="bigCard cardBeginner" data-mode="beginner">
+          <img class="cardImg" src="assets/raimi.png" alt="라이미" />
+          <div class="cardTitle" data-i18n="modeBeginnerTitle">초보자 모드</div>
+          <div class="cardDesc" data-i18n-html="modeBeginnerDesc"></div>
+          <div class="cardTag" data-i18n="modeBeginnerTag">라이미가 도와줘요 😊</div>
+        </button>
+        <button class="bigCard cardChallenger" data-mode="challenger">
+          <div class="cardIcon">🔥</div>
+          <div class="cardTitle" data-i18n="modeChallengerTitle">도전자 모드</div>
+          <div class="cardDesc" data-i18n-html="modeChallengerDesc"></div>
+          <div class="cardTag" data-i18n="modeChallengerTag">혼자서 척척! 💪</div>
+        </button>
+      </div>
+      <button class="backLink" id="modeBack" data-i18n="backToHome">← 처음 화면으로</button>
+    </section>
+
+    <!-- 게임 (미로 + 블록코딩) : 내용은 js/maze.js 가 그림 -->
+    <section class="screen" id="s-game"></section>
+
+    <!-- 퀴즈 : 내용은 js/quiz.js 가 그림 -->
+    <section class="screen center" id="s-quiz"></section>
+
+    <!-- 파이썬 배우기 : 내용은 js/pylab.js 가 그림 -->
+    <section class="screen" id="s-python"></section>
+
+    <!-- 준비 중 (퀴즈 / 파이썬 — 다음 단계에서 제작) -->
+    <section class="screen center" id="s-soon">
+      <div class="soonWrap fadeUp">
+        <img class="introHero" src="assets/raimi.png" alt="라이미" />
+        <div class="introBubble" id="soonBubble" data-i18n-html="soonBody"></div>
+        <button class="introBtn" id="soonBack" data-i18n="backToHome">← 처음 화면으로</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="siteFooter">Created by Juwon Lee · Seoul RAIM</footer>
+  </div>
+
+  <script type="module" src="js/app.js?v=3"></script>
+</body>
+</html>
