@@ -1,5 +1,5 @@
 // 라이미 블록코딩 연구소 — 코딩 퀴즈 (카테고리: 1.코딩이란 2.함수)
-import { t, getLang, show, raimiImg, breakSentences } from "./app.js?v=3";
+import { t, getLang, show, raimiImg, breakSentences } from "./app.js?v=4";
 
 let view = "pick";   // pick | quiz | result
 let catIdx = 0;

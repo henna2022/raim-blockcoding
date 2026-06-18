@@ -1,7 +1,7 @@
-import { I18N } from "./i18n.js?v=3";
-import { openGame, rerenderGame } from "./maze.js?v=3";
-import { openQuiz, rerenderQuiz } from "./quiz.js?v=3";
-import { openPyLab, rerenderPyLab } from "./pylab.js?v=3";
+import { I18N } from "./i18n.js?v=4";
+import { openGame, rerenderGame } from "./maze.js?v=4";
+import { openQuiz, rerenderQuiz } from "./quiz.js?v=4";
+import { openPyLab, rerenderPyLab } from "./pylab.js?v=4";
 
 const RAIMI_IMG = "assets/raimi.png";
 
@@ -120,3 +120,39 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").catch(() => {});
   });
 }
+
+// ===================== PWA 설치 안내 =====================
+const installBtn = document.getElementById("installBtn");
+const iosSheet = document.getElementById("iosSheet");
+let deferredPrompt = null;
+function isStandalone() {
+  return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+}
+function isIOS() {
+  return /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); // iPadOS
+}
+// 안드로이드/크롬/엣지: 설치 가능 시점에 버튼 노출
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  if (!isStandalone()) installBtn.style.display = "flex";
+});
+window.addEventListener("appinstalled", () => {
+  installBtn.style.display = "none";
+  deferredPrompt = null;
+});
+installBtn.onclick = async () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice.catch(() => {});
+    deferredPrompt = null;
+    installBtn.style.display = "none";
+  } else if (isIOS()) {
+    iosSheet.classList.add("show");
+  }
+};
+document.getElementById("iosClose").onclick = () => iosSheet.classList.remove("show");
+iosSheet.onclick = (e) => { if (e.target === iosSheet) iosSheet.classList.remove("show"); };
+// iOS 사파리엔 beforeinstallprompt 가 없으므로, 설치 전이면 버튼을 직접 노출
+if (!isStandalone() && isIOS()) installBtn.style.display = "flex";

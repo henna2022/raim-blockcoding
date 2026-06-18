@@ -1,6 +1,6 @@
 // 라이미 블록코딩 연구소 — 미로 길찾기 게임 (엔트리 스타일 블록코딩)
-import { t, getLang, show, raimiImg, breakSentences } from "./app.js?v=3";
-import { I18N } from "./i18n.js?v=3";
+import { t, getLang, show, raimiImg, breakSentences } from "./app.js?v=4";
+import { I18N } from "./i18n.js?v=4";
 
 // '#' 벽, '.' 길, 'S' 시작, 'G' 깃발(목표). dir = 시작 방향, hint = 초보자 강조 블록
 const LEVELS = [

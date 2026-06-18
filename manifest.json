@@ -1,14 +1,21 @@
 {
+  "id": "./",
   "name": "라이미의 블록코딩 연구소",
-  "short_name": "블록코딩 연구소",
+  "short_name": "블록코딩",
   "description": "블록코딩으로 코딩과 파이썬을 배우고 직접 게임을 만들어요!",
-  "start_url": "./index.html",
+  "start_url": "./?source=pwa",
+  "scope": "./",
   "display": "standalone",
   "orientation": "landscape",
   "background_color": "#eef0ff",
   "theme_color": "#6c7bff",
+  "lang": "ko",
+  "dir": "ltr",
+  "categories": ["education", "kids", "games"],
   "icons": [
-    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
-    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }

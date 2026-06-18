@@ -5,6 +5,10 @@ export const I18N = {
     appSub: "코딩과 파이썬에 대해 차근차근 알아가봐요!",
     homeBtn: "🏠 처음으로",
     backToHome: "← 처음 화면으로",
+    installApp: "📲 앱 설치",
+    iosTitle: "홈 화면에 앱으로 추가하기",
+    iosBody: "사파리 아래(또는 위)의 <b>공유 버튼 ⬆️</b>을 누르고,<br><b>'홈 화면에 추가'</b>를 선택하면 앱처럼 쓸 수 있어요!",
+    iosClose: "알겠어요",
 
     introHi: "안녕하세요! 저는 코딩 친구 라이미예요 🤖",
     introTitle: "라이미와 함께 코딩을 배워봐요!",
@@ -197,6 +201,10 @@ export const I18N = {
     appSub: "Let's explore coding and Python, step by step!",
     homeBtn: "🏠 Home",
     backToHome: "← Back to start",
+    installApp: "📲 Install app",
+    iosTitle: "Add to Home Screen",
+    iosBody: "Tap the <b>Share ⬆️</b> button in Safari,<br>then choose <b>'Add to Home Screen'</b> to use it like an app!",
+    iosClose: "Got it",
 
     introHi: "Hi! I'm Raimi, your coding buddy 🤖",
     introTitle: "Let's learn to code with Raimi!",

@@ -1,19 +1,20 @@
 // 라이미 블록코딩 연구소 — 간단한 오프라인 캐시 (PWA)
-const CACHE = "raim-block-v3";
+const CACHE = "raim-block-v4";
 const ASSETS = [
   "./",
   "./index.html",
-  "./css/styles.css?v=3",
-  "./js/app.js?v=3",
-  "./js/i18n.js?v=3",
-  "./js/maze.js?v=3",
-  "./js/quiz.js?v=3",
-  "./js/pylab.js?v=3",
+  "./css/styles.css?v=4",
+  "./js/app.js?v=4",
+  "./js/i18n.js?v=4",
+  "./js/maze.js?v=4",
+  "./js/quiz.js?v=4",
+  "./js/pylab.js?v=4",
   "./assets/raimi.png",
   "./assets/seoulraim_logo.png",
   "./assets/python-logo.svg",
   "./assets/icon-192.png",
   "./assets/icon-512.png",
+  "./assets/apple-touch-icon.png",
   "./manifest.json"
 ];
 

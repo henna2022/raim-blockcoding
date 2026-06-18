@@ -1,5 +1,5 @@
 // 라이미 블록코딩 연구소 — 파이썬 배우기 (print/변수/연산/len/for/if/max)
-import { t, getLang, show, raimiImg, breakSentences } from "./app.js?v=3";
+import { t, getLang, show, raimiImg, breakSentences } from "./app.js?v=4";
 
 const ICON = { print: "🗨️", repeat: "🔁", if: "🔀", var: "📦" };
 
